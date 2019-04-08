@@ -23,4 +23,14 @@ python3 getlab.py [username] [password] [visibility] [optional path]
 * *visibility* can take 4 values: private (to get only private repos), public (to get only public repos), internal (to get only internal repos), or all (to get all repos)
 * *optional_path* is the absolute path of the destination directory to clone the repositories to. If not provided, it will use the current path.
 
+# Examples
 
+* To get only private repos:
+```
+python3 getlab.py my_username my_password private
+```
+
+* To get all kinds of repos and put them in Documents directory:
+```
+python3 getlab.py my_username my_password all /Users/myusername/Documents
+```
