@@ -35,7 +35,7 @@ def git_auth(gitlab_url, private_token):
 
 def give_me_repos(gl, username, password, path):
     progress = 0
-    projects = gl.projects.list()
+    projects = gl.projects.list(visibility='private', all=True)
     for project in projects:
         dir_name = project.path
         if os.path.exists(os.path.join(path, dir_name)):
